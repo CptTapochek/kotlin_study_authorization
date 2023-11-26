@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             val login = userLogin.text.toString().trim()
-            val email = userLogin.text.toString().trim()
-            val password = userLogin.text.toString().trim()
+            val email = userEmail.text.toString().trim()
+            val password = userPassword.text.toString().trim()
 
             if(login.isEmpty() || email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "All field are required", Toast.LENGTH_LONG).show()

@@ -30,7 +30,6 @@ class DbConnection(val context: Context, val factory: SQLiteDatabase.CursorFacto
 
     fun getUser(login: String, password: String) : Boolean {
         val db = this.readableDatabase
-
         val result = db.rawQuery("SELECT * FROM users WHERE login = '$login' AND password = '$password'", null)
         return result.moveToFirst()
     }
