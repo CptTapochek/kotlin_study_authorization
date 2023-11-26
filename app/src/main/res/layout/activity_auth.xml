@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_vertical"
-    android:background="#201E28"
-    tools:context=".MainActivity">
+    android:background="#e2a600"
+    tools:context=".AuthActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,10 +17,10 @@
         android:layout_gravity="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:text="Create account" />
+        android:text="Login" />
 
     <EditText
-        android:id="@+id/user_login"
+        android:id="@+id/user_login_auth"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -32,19 +32,7 @@
         android:hint="Login" />
 
     <EditText
-        android:id="@+id/user_email"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textColorHint="#6a6a6a"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:textColor="#fdfdfd"
-        android:hint="Email" />
-
-    <EditText
-        android:id="@+id/user_password"
+        android:id="@+id/user_password_auth"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -56,24 +44,24 @@
         android:hint="Password" />
 
     <Button
-        android:id="@+id/button_reg"
+        android:id="@+id/button_auth"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#e2a600"
+        android:backgroundTint="#201E28"
         android:textSize="16sp"
-        android:text="Register" />
+        android:text="Login" />
 
     <TextView
-        android:id="@+id/link_to_auth"
+        android:id="@+id/link_to_reg"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="120dp"
         android:fontFamily="@font/inter"
-        android:text="Login"
+        android:text="Create user"
         android:textAlignment="center"
         android:textColor="#fdfdfd"
         android:textSize="17sp"
