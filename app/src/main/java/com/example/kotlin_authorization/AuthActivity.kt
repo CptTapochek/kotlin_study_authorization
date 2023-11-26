@@ -40,6 +40,10 @@ class AuthActivity : AppCompatActivity() {
                     //Hide keyboard
                     val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                     imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+
+                    //Go to content screen
+                    val intent = Intent(this, ItemsActivity::class.java)
+                    startActivity(intent)
                 } else {
                     Toast.makeText(this, "Login or password is incorrect", Toast.LENGTH_LONG).show()
                 }
