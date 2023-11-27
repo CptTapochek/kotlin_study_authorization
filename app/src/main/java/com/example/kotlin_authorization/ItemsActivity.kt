@@ -2,6 +2,7 @@ package com.example.kotlin_authorization
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class ItemsActivity : AppCompatActivity() {
@@ -36,5 +37,8 @@ class ItemsActivity : AppCompatActivity() {
             "Id diam maecenas ultricies mi eget. Suspendisse ultrices gravida dictum fusce. Ultrices sagittis orci a scelerisque purus. Tristique nulla aliquet enim tortor. Enim eu turpis egestas pretium aenean pharetra magna. Nullam non nisi est sit amet facilisis magna etiam tempor. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Urna nec tincidunt praesent semper feugiat. ",
             849
         ))
+
+        itemsList.layoutManager = LinearLayoutManager(this)
+        itemsList.adapter = ItemsAdapter(items, this)
     }
 }

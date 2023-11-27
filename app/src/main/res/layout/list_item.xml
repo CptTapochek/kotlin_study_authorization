@@ -4,6 +4,7 @@
     android:background="#bf8e05"
     android:paddingBottom="20dp"
     android:layout_width="match_parent"
+    android:layout_marginBottom="20dp"
     android:layout_height="wrap_content">
 
     <ImageView
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@tools:sample/avatars" />
+        android:src="@drawable/cabinet" />
 
     <TextView
         android:id="@+id/item_title"
