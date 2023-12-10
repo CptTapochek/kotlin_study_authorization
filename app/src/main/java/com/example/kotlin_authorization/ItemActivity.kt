@@ -4,6 +4,7 @@ import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.razorpay.Checkout
@@ -20,10 +21,19 @@ class ItemActivity : AppCompatActivity() {
 
         val title: TextView = findViewById(R.id.item_view_title)
         val text: TextView = findViewById(R.id.item_view_text)
+        val price: TextView = findViewById(R.id.item_view_price)
+        val images: ImageView = findViewById(R.id.images_view)
         val btnBuy: Button = findViewById(R.id.buy_button)
 
+        val imageId = resources.getIdentifier(
+            intent.getStringExtra("itemImage"),
+            "drawable",
+            packageName
+        )
+        images.setImageResource(imageId)
         title.text = intent.getStringExtra("itemTitle")
         text.text = intent.getStringExtra("itemText")
+        price.text = intent.getStringExtra("itemPrice")
         btnBuy.setOnClickListener {
             startPayment()
         }

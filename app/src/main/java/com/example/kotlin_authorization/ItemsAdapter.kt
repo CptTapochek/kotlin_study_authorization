@@ -44,7 +44,9 @@ class ItemsAdapter(var items: List<Item>, var context: Context) : RecyclerView.A
         holder.button.setOnClickListener {
             val intent = Intent(context, ItemActivity::class.java)
             intent.putExtra("itemTitle", items[position].title)
+            intent.putExtra("itemImage", items[position].image)
             intent.putExtra("itemText", items[position].description)
+            intent.putExtra("itemPrice", items[position].price.toString() + "$")
             context.startActivity(intent)
         }
     }
